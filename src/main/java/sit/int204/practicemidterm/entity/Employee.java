@@ -1,4 +1,4 @@
-package sit.int204.classicmodels.Models;
+package sit.int204.practicemidterm.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

@@ -1,2 +1,11 @@
-package sit.int204.practicemidterm.utils;public class ApplicationConfig {
+package sit.int204.practicemidterm.utils;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ApplicationConfig {
+    @Bean
+    public ModelMapper modelMapper (){return new ModelMapper();}
 }

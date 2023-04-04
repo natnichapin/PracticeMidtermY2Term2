@@ -1,4 +1,4 @@
-package sit.int204.classicmodels.Models;
+package sit.int204.practicemidterm.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
