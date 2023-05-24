@@ -27,11 +27,9 @@ public class Customer {
     private String postalCode ;
     private String country ;
     private String role ;
-    @ManyToOne
-    @JoinColumn(name = "salesRepEmployeeNumber")
-    private Employee salesRepEmployee ;
+    private Integer salesRepEmployeeNumber;
     private Double creditLimit ;
-    private String password ;
+
 
 
 //    ตอน sout ได้ ดึงค่ามาจาก method toString

@@ -15,20 +15,22 @@ import java.util.List;
 @Getter
 @Table(name="orders")
 public class Order {
+
     @Id
     private  int orderNumber ;
+
     private Date orderDate;
     private Date shippedDate ;
     private String status ;
     private String comments ;
-    @ManyToOne
-    @JoinColumn(name="customerNumber")
-    private Customer customer ;
+    private Integer customerNumber ;
 
-    @JsonIgnore
-    @OneToMany
-    @Column(name = "ListOrderDetail")
-    private List<Orderdetail> orderdetailList ;
+
+
+//    @ManyToOne
+//    @JoinColumn(name = "customerNumber")
+//    private Customer customer ;
+
     //ไม่เคยมี col ไม่ต้อง @column
     //ถ้า many to one ต้องแอด เหมือนจะได้เอา object ไป map ที่ตัว office ก้อนนั้น ที่มีก้อนเดียว
 }
