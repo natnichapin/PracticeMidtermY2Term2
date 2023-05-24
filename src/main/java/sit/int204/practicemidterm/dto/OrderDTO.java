@@ -1,6 +1,7 @@
 package sit.int204.practicemidterm.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,8 +24,8 @@ public class OrderDTO {
     private Integer orderNumber ;
     private Date orderDate ;
     private String status ;
-    private Integer customerNumber ;
-    private SimpleCustomerDTO customerDTO;
+    @Column(name="customerNumber")
+    private SimpleCustomerDTO customer;
     private  Orderdetail orderdetail ;
 
 

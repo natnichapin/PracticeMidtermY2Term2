@@ -43,11 +43,11 @@ public class OrderController {
 //               SimpleCustomerDTO cus = modelMapper.map(serviceCus.getCustomerById(x.getCustomerNumber()),SimpleCustomerDTO.class)
         List<OrderDTO> orders1 = listMapper.mapList( orders,OrderDTO.class,modelMapper) ;
 //        }
-        List<OrderDTO> orderDTOS =orders1.stream().map((x)->{
-            x.setCustomerDTO(modelMapper.map(serviceCus.getCustomerById(x.getCustomerNumber()),SimpleCustomerDTO.class));
-            return x ;
-        }).collect(Collectors.toList());
-        return  orderDTOS;
+//        List<OrderDTO> orderDTOS =orders1.stream().map((x)->{
+//            x.setCustomerDTO(modelMapper.map(serviceCus.getCustomerById(x.getCustomerNumber()),SimpleCustomerDTO.class));
+//            return x ;
+//        }).collect(Collectors.toList());
+        return  orders1 ;
     }
 
     @GetMapping("")

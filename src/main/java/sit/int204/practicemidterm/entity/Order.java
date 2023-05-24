@@ -4,8 +4,10 @@ package sit.int204.practicemidterm.entity;
 
         import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+        import lombok.AllArgsConstructor;
+        import lombok.Getter;
+        import lombok.NoArgsConstructor;
+        import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +15,8 @@ import java.util.List;
 @Entity
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="orders")
 public class Order {
 
@@ -23,7 +27,9 @@ public class Order {
     private Date shippedDate ;
     private String status ;
     private String comments ;
-    private Integer customerNumber ;
+    @ManyToOne
+    @JoinColumn(name="customerNumber ")
+    private Customer customerNumber ;
 
 
 
